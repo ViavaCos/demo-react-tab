@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+
+.tab{
+    width: 600px;
+    margin: 200px auto;
+}
+.title{
+    border: #000 solid 1px;
+}
+
+.title .active{
+    background-color: aquamarine;
+}
+.title li{
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    width: 33.333%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.content{
+    display: flex;
+    border: #000 solid 1px;
+    border-top: none;
+}
+.content .item{
+    background-color: aquamarine;
+    width: 100%;
+    text-align: center;
+    height: 400px;
+    line-height: 40px;
+}

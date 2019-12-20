@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import Tab from './components/tab';
+
+class App extends React.Component {
+  state = {
+    listData: null
+  }
+
+  getListData () {
+    const data = [
+      { type: "水果", list: ["苹果", "香蕉"] },
+      { type: "主食", list: ["米饭", "面条"] },
+      { type: "交通工具", list: ["公交车", "自行车"] }
+    ]
+    setTimeout(() => {
+
+      this.setState({
+        listData: data
+      })
+      // console.log(this)
+      // console.log(this.listData)
+    }, 200)
+  }
+
+  componentDidMount () {
+    // const listData = this.getListData()
+    // this.setState({
+    //   listData
+    // })
+    this.getListData()
+    // console.log(this.listData)
+  }
+
+  render () {
+    return (
+      <div className="App">
+        <Tab data={this.listData}></Tab>
+      </div>
+    )
+  }
 }
 
 export default App;
