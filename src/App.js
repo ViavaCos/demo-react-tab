@@ -9,10 +9,16 @@ class App extends React.Component {
   }
 
   getListData () {
+    // const data = [
+    //   {list: ["苹果", "香蕉"] },
+    //   { type: "主食", list: ["米饭", "面条"] },
+    //   { type: "交通工具", list: ["公交车", "自行车"] }
+    // ]
+
     const data = [
-      { type: "水果", list: ["苹果", "香蕉"] },
-      { type: "主食", list: ["米饭", "面条"] },
-      { type: "交通工具", list: ["公交车", "自行车"] }
+      ["苹果", "香蕉"],
+      ["米饭", "面条"],
+      ["公交车", "自行车"]
     ]
     setTimeout(() => {
 
@@ -36,7 +42,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-        <Tab data={this.listData}></Tab>
+        <Tab data={this.state.listData}></Tab>
       </div>
     )
   }
